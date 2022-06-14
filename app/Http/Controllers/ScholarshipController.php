@@ -16,5 +16,4 @@ class ScholarshipController extends Controller
         return view('scholarship.show');
     }
 
-
 }
