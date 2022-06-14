@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StudentController;
+use App\Http\Controllers\ScholarshipController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,3 +20,6 @@ Route::get('/', function () {
 });
 
 Route::resource('student', StudentController::class);
+
+Route::get('scholarship', [ScholarshipController::class, 'index']);
+Route::get('scholarship/list', [ScholarshipController::class, 'show'])->name('scholarship.show');
