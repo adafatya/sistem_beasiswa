@@ -11,8 +11,10 @@ class ScholarshipController extends Controller
         return view('scholarship.index');
     }
 
-    public function show()
+    public function criteria()
     {
         return view('scholarship.show');
     }
+
+
 }

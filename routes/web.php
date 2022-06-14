@@ -21,5 +21,10 @@ Route::get('/', function () {
 
 Route::resource('student', StudentController::class);
 
-Route::get('scholarship', [ScholarshipController::class, 'index']);
-Route::get('scholarship/list', [ScholarshipController::class, 'show'])->name('scholarship.show');
+Route::get('scholarship', [ScholarshipController::class, 'index'])->name(
+    'scholarship.index'
+);
+Route::post('scholarship', [
+    ScholarshipController::class,
+    'criteria',
+])->name('scholarship.criteria');
