@@ -24,7 +24,10 @@ Route::resource('student', StudentController::class);
 Route::get('scholarship', [ScholarshipController::class, 'index'])->name(
     'scholarship.index'
 );
-Route::post('scholarship', [
+Route::post('scholarship', [ScholarshipController::class, 'criteria'])->name(
+    'scholarship.criteria'
+);
+Route::get('scholarship/recommendation', [
     ScholarshipController::class,
-    'criteria',
-])->name('scholarship.criteria');
+    'recommendation',
+])->name('scholarship.recommendation');
